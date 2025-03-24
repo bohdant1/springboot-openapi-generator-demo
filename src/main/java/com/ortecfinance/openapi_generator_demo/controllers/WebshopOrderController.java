@@ -31,9 +31,15 @@ public class WebshopOrderController {
 
     public WebshopOrderController() {
         // Initialize with some sample orders
-        orders.add(new Order(UUID.randomUUID().toString(), "Laptop", 999.99, "John Doe"));
-        orders.add(new Order(UUID.randomUUID().toString(), "Smartphone", 599.99, "Jane Smith"));
-        orders.add(new Order(UUID.randomUUID().toString(), "Headphones", 149.99, "Bob Johnson"));
+        UUID uuid1 = UUID.randomUUID();
+        logger.info(uuid1.toString());
+        UUID uuid2 = UUID.randomUUID();
+        logger.info(uuid2.toString());
+        UUID uuid3 = UUID.randomUUID();
+        logger.info(uuid3.toString());
+        orders.add(new Order("1", "Laptop", 999.99, "John Doe"));
+        orders.add(new Order("2", "Smartphone", 599.99, "Jane Smith"));
+        orders.add(new Order("3", "Headphones", 149.99, "Bob Johnson"));
         logger.info("WebshopOrderController initialized with {} sample orders", orders.size());
     }
 
